@@ -4,6 +4,7 @@ const server = express();
 
 server.use(express.json());
 
+let requests = 0;
 const projects = [
   {
     id: "16",
@@ -11,8 +12,6 @@ const projects = [
     tasks: []
   }
 ];
-
-let requests = 0;
 
 //MIDDLEWARES
 function checkProjectExists(req, res, next) {
